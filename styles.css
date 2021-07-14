@@ -1,0 +1,118 @@
+:root {
+    --gridSize: 60rem;  /* 960px (1rem = 16px) */
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Quicksand', sans-serif;
+    background-color: #f1edee;
+}
+
+header {
+    font-size: 3.5rem;
+    margin-bottom: 3rem;
+}
+
+.grid {
+    box-sizing: content-box;
+    width: var(--gridSize);
+    height: var(--gridSize);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 0px;   
+    border-right: 1px black solid;
+    border-top: 1px black solid;
+    background-color: white;
+    margin-right: -1rem;
+    
+   
+}
+
+.grid div {
+    width:3.75rem; /* = 60px (16px = 1em) */
+    height: auto;
+    transition: background-color 500ms;
+    border: 1px black solid;
+    border-right: none;
+    border-top: none;
+}
+
+
+.toolbox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+    font-size: 1.5em;
+  
+}
+
+.toolbox button {
+    font-size: 1em;
+    font-family: inherit;
+    width: 9rem;
+    padding: 0.75rem 1rem;
+    margin-top: 0.5em;
+    background-color: #56cace;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.toolbox button:hover {
+    border: 1px #ce56c8 solid;
+
+}
+
+.slidercontainer {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.1em;
+    padding: 1rem 0;
+}
+
+
+.slider {
+    appearance: none;
+    border-radius: 15px;
+    width: 100%; /* Full-width */
+    height: 1.5rem; /* Specified height */
+    outline: none; /* Remove outline */
+    background-color: #56cace;
+    margin-top: 0.5rem;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #eec335;
+    cursor: pointer;
+    
+  }
+  
+  .slider input::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #eec335;
+    cursor: pointer;
+  }
+   
